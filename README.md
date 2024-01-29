@@ -91,15 +91,3 @@ Cmd 26: S
 Cmd 27: E 90
 90 not found
 `
-
-
-my faulty "output.txt":
-`
-Cmd 1: Clr
-unsuccessful
-Cmd 2: Em
-yes
-Cmd 3: I 10 Thors
-16194288_°n÷  
-Cmd 4: I 34 Canute
-`
