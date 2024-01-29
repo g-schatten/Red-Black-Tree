@@ -77,7 +77,8 @@ public:
         root = nil;
     }
 
-    Node* insert(Node* z){
+    Node* insert(int k, const string& v){
+        Node* z = new Node(k, v);
         Node* y = nil;
         Node* x = root;
         while(x != nil){
@@ -333,13 +334,13 @@ public:
 
     void insert(int key, const string& value) {
         RBTree::Node* existingNode = tree.find(key);
+
         if (existingNode != tree.nil) {
             existingNode->value = value;
         } else {
-            RBTree::Node* newNode = new RBTree::Node(key, value);
-            tree.insert(newNode);
-            delete newNode;
+            RBTree::Node* newNode = tree.insert(key, value);
         }
+
         tree.print(tree.root);
         cout << endl;
     }
